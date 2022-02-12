@@ -6,6 +6,7 @@ node {
 
    stage 'Setup'
         sh 'npm config set registry  http://registry.npmjs.org/'
+        sh 'npm config set strict-ssl=false'
         sh 'npm install'
 
    stage 'Mocha test'
